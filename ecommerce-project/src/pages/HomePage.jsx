@@ -9,11 +9,11 @@ export function HomePage() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/products").then((response) => {
+    axios.get("/api/products").then((response) => {
       setProducts(response.data);
     });
 
-    axios.get("http://localhost:3000/api/cart-items").then((response) => {
+    axios.get("/api/cart-items").then((response) => {
       setCart(response.data);
     });
   }, []);
@@ -22,7 +22,7 @@ export function HomePage() {
     <>
       <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
 
-      <Header cart={cart}/>
+      <Header cart={cart} />
 
       <div className="home-page">
         <div className="products-grid">
