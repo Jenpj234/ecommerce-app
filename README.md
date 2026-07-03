@@ -144,8 +144,3 @@ The frontend is configured to generate a production build that can be served by 
 This project was built as a learning exercise while gaining experience with modern full-stack web development using React and Node.js. Additional improvements and features may be added over time.
 
 ---
-
-
-Computer Science Student at Brooklyn College
-
-GitHub: https://github.com/Jenpj234
