@@ -1,14 +1,26 @@
 import dayjs from "dayjs";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Chatbot } from "supersimpledev";
 import LoadingSpinnerImage from "../assets/loading-spinner.gif";
 import "./ChatInput.css";
 
-export function ChatInput({ chatMessages, setChatMessages }) {
+type ChatMessage = {
+  message: string | React.ReactNode;
+  sender: string;
+  id: string;
+  time?: number;
+};
+
+type ChatInputProps = {
+  chatMessages: ChatMessage[];
+  setChatMessages: (chatMessages: ChatMessage[]) => void;
+};
+
+export function ChatInput({ chatMessages, setChatMessages }: ChatInputProps) {
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  function saveInputText(event) {
+  function saveInputText(event: React.ChangeEvent<HTMLInputElement>) {
     setInputText(event.target.value);
   }
 
@@ -58,7 +70,7 @@ export function ChatInput({ chatMessages, setChatMessages }) {
     setIsLoading(false);
   }
 
-  function sendMessageKeyDown(event) {
+  function sendMessageKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key === "Enter") {
       sendMessage();
     }
