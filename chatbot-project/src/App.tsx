@@ -6,33 +6,37 @@ import robotIcon from "./assets/robot.png";
 import "./App.css";
 
 function App() {
+  const savedMessages = localStorage.getItem("messages");
+
   const [chatMessages, setChatMessages] = useState(
-    JSON.parse(localStorage.getItem("messages")) || [
-      {
-        message: "hello chatbot",
-        sender: "user",
-        id: "id1",
-        time: 1736127288920,
-      },
-      {
-        message: "Hello! How can I help you?",
-        sender: "robot",
-        id: "id2",
-        time: 1736127291230,
-      },
-      {
-        message: "can you get me todays date?",
-        sender: "user",
-        id: "id3",
-        time: 1736127385356,
-      },
-      {
-        message: "Today is September 27",
-        sender: "robot",
-        id: "id4",
-        time: 1736127385500,
-      },
-    ],
+    savedMessages
+      ? JSON.parse(savedMessages)
+      : [
+          {
+            message: "hello chatbot",
+            sender: "user",
+            id: "id1",
+            time: 1736127288920,
+          },
+          {
+            message: "Hello! How can I help you?",
+            sender: "robot",
+            id: "id2",
+            time: 1736127291230,
+          },
+          {
+            message: "can you get me todays date?",
+            sender: "user",
+            id: "id3",
+            time: 1736127385356,
+          },
+          {
+            message: "Today is September 27",
+            sender: "robot",
+            id: "id4",
+            time: 1736127385500,
+          },
+        ],
   );
 
   // const [chatMessages, setChatMessages] = array;
