@@ -20,7 +20,11 @@ export function ChatInput({ chatMessages, setChatMessages }: ChatInputProps) {
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  function saveInputText(event: React.ChangeEvent<HTMLInputElement>) {
+  function saveInputText(event: {
+    target: {
+      value: string;
+    };
+  }) {
     setInputText(event.target.value);
   }
 
@@ -87,7 +91,7 @@ export function ChatInput({ chatMessages, setChatMessages }: ChatInputProps) {
     <div className="chat-input-container">
       <input
         placeholder="Send a message to Chatbot"
-        size="30"
+        size={30}
         onChange={saveInputText}
         value={inputText}
         onKeyDown={sendMessageKeyDown}
