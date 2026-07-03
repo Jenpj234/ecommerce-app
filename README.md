@@ -2,6 +2,10 @@
 
 A full-stack ecommerce application built with a React frontend and a Node.js backend. The project simulates a modern online shopping experience with product browsing, cart management, checkout, order tracking, and backend API integration.
 
+## Demo Video
+
+[▶️ Watch the project demo](demo.mp4)
+
 ---
 
 ## Project Structure
