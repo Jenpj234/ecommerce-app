@@ -4,9 +4,9 @@ A full-stack ecommerce application built with a React frontend and a Node.js bac
 
 ## Screenshots
 
-[Screenshots/home.png]
-[Screenshots/checkout.png]
-[Screenshots/orders.png]
+![homepage](Screenshots/home.png)
+![checkout](Screenshots/checkout.png)
+![orders](Screenshots/orders.png)
 
 ---
 
