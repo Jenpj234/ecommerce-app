@@ -12,7 +12,7 @@ A full-stack ecommerce application built with a React frontend and a Node.js bac
 
 ## Demo Video
 
-[▶️ Watch the project demo](demo.mp4)
+[▶️ Watch the project demo](ecommerce-app.mp4)
 
 ---
 
